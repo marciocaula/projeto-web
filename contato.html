@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configurações básicas e metadados da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | Perfil Profissional</title>
+    <!-- Link para o arquivo de estilização CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Cabeçalho principal da página -->
     <header>
         <h1>Márcio Caúla</h1>
-        
     </header>
 
+    <!-- Menu de navegação do site -->
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -21,11 +24,14 @@
             <li><a href="portfolio.html">Portfólio</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+        <!-- Botão para alternar entre temas claro/escuro -->
         <button id="btn-tema" style="margin-left: 20px; cursor: pointer;">Mudar Tema</button>
     </nav>
 
+    <!-- Seção principal contendo o formulário de contato -->
     <section>
         <h3>Entre em contato</h3>
+        <!-- Formulário de contato com atributo novalidate para controle via JS -->
         <form id="formulario-contato" novalidate>
             <label for="nome">Nome:</label><br>
             <input type="text" id="nome" required><br><br>
@@ -36,12 +42,14 @@
             <label for="mensagem">Mensagem:</label><br>
             <textarea id="mensagem" rows="4" required></textarea><br><br>
 
+            <!-- Botão de envio -->
             <button type="submit">Enviar</button>
         </form>
-        <!-- Elemento para exibir a mensagem de sucesso -->
+        <!-- Elemento para exibir a mensagem de feedback de sucesso (manipulado via JS) -->
         <p id="status-envio" style="margin-top: 15px; font-weight: bold;"></p>
     </section>
 
+    <!-- Seção secundária com informações de contato diretas -->
     <section>
         <h3>Outras formas de conexão</h3>
         <p>Fique à vontade para entrar em contato para conversar sobre tecnologia, tirar dúvidas ou discutir oportunidades:</p>
@@ -51,10 +59,12 @@
         </ul>
     </section>
 
+    <!-- Rodapé da página -->
     <footer>
         <p>Página criada para apresentação de portfólio.</p>
     </footer>
 
+    <!-- Link para o arquivo de lógica/interatividade JavaScript -->
     <script src="script.js"></script>
 
 </body>
