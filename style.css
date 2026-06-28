@@ -1,0 +1,126 @@
+/* 1. VARIÁVEIS DE CORES (PALETA DO TEMA CLARO) 
+   Cores do visual do site no modo padrão. */
+:root {
+    --bg-cor: #f9f4f4;        /* Fundo geral da página */
+    --texto-cor: #333;        /* Cor do texto principal */
+    --cabecalho-bg: #2c3e50;  /* Cor de fundo do cabeçalho */
+    --nav-bg: #34495e;        /* Cor de fundo da barra de navegação */
+    --link-cor: white;        /* Cor dos links do menu */
+    --link-hover: #3498db;    /* Cor dos links ao passar o mouse */
+    --secao-bg: white;        /* Fundo dos cartões de conteúdo (sections) */
+    --border-cor: #ccc;       /* Cor de bordas (se você adicionar alguma) */
+}
+
+/* 2. CONFIGURAÇÃO DO DARK MODE 
+   Quando a classe .dark-mode é adicionada ao <body> pelo JavaScript, 
+   estas variáveis sobrescrevem as anteriores. */
+.dark-mode {
+    --bg-cor: #121212;
+    --texto-cor: #e0e0e0;
+    --cabecalho-bg: #000;
+    --nav-bg: #1f1f1f;
+    --link-hover: #e6fc86a9;
+    --secao-bg: #1e1e1e;
+}
+
+/* 3. ESTILIZAÇÃO GERAL DO CORPO (BODY)
+   Define a fonte global e a transição suave para quando você mudar de tema. */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-cor);
+    color: var(--texto-cor);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Animação suave ao trocar tema */
+}
+
+/* 4. CABEÇALHO (HEADER)
+   Controla a faixa superior do site onde fica seu nome e cargo. */
+header {
+    background-color: var(--cabecalho-bg);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* 5. NAVEGAÇÃO (NAV)
+   Aqui é onde definimos o alinhamento horizontal do menu. */
+nav {
+    background-color: var(--nav-bg);
+    display: flex;             /* Habilita o uso de flexbox para alinhamento */
+    justify-content: center;   /* Centraliza os itens na horizontal */
+    align-items: center;       /* Alinha os itens na vertical */
+    padding: 10px 20px;
+    gap: 30px;                 /* Espaçamento entre o menu e o botão de tema */
+}
+
+/* 6. LISTA DE LINKS DO MENU
+   Controla a disposição dos links "Início", "Sobre", etc. */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;             /* Mantém os links em linha horizontal */
+    gap: 20px;                 /* Espaçamento entre cada link */
+}
+
+/* Estilização específica dos links do menu */
+nav a {
+    color: var(--link-cor);      /* Usa a cor definida na variável --link-cor */
+    text-decoration: none;       /* Remove aquele sublinhado padrão dos links */
+    font-weight: bold;           /* Deixa o texto em negrito */
+}
+
+nav a:hover {
+    color: #1cb5c0; /* Altere para a cor de destaque que você quiser */
+}
+
+/* 7. BOTÕES
+   Estiliza o botão para que não fique grande ou desproporcional. */
+#btn-tema {
+    padding: 6px 12px;
+    background-color: var(--link-hover);
+    color: white;
+    border: none;
+    border-radius: 4px;        /* Bordas levemente arredondadas */
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#btn-tema:hover {
+    filter: brightness(1.2);   /* Efeito de brilho ao passar o mouse */
+}
+
+#btn-leia-mais {
+    background-color: var(--nav-bg);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* 8. SEÇÕES DE CONTEÚDO (SECTION)
+   Controla a aparência dos blocos onde ficam seus textos ("Sobre", "Formação", etc). */
+section {
+    max-width: 800px;          /* Limita a largura para leitura confortável */
+    margin: 30px auto;         /* Centraliza o bloco na página */
+    background: var(--secao-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Cria um efeito de sombra/elevação */
+}
+
+/* 9. RODAPÉ (FOOTER)
+   Controla a área final da página. */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cabecalho-bg);
+    color: white;
+    margin-top: 40px;
+}
+
