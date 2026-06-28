@@ -124,3 +124,20 @@ footer {
     margin-top: 40px;
 }
 
+/* 10. Ajuste para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Coloca os itens um embaixo do outro */
+        align-items: center;    /* Centraliza os links */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;         /* Adiciona um espaço entre os links */
+    }
+
+    /* Ajusta o botão "Mudar Tema" se ele estiver desalinhado */
+    #btn-tema {
+        margin-top: 10px;
+    }
+}
